@@ -3,16 +3,45 @@
   "internalId": "Int-bca68331-c106-41cf-bfba-07860c52e739",
   "createdDate": "2023-06-15",
   "status": "draft",
-  "applicationReference": "User needing form 2 attachment",
+  "applicationReference": "Multiple Attachments",
   "confirmInformationDeclaration": true,
   "eligibilitySubmissionData": {
     "threshold": {
       "mandatoryRegistration": false
     },
     "partyType": "61",
-    "registrationReason": "0018",
-    "isTransactor": false,
+    "registrationReason": "0011",
+    "isTransactor": true,
     "fixedEstablishmentInManOrUk": true
+  },
+  "transactorDetails": {
+    "personalDetails" : {
+      "name" : {
+        "first" : "testFirstNameTransactor",
+        "last" : "testLastNameTransactor"
+      },
+      "nino" : "AA123456A",
+      "identifiersMatch" : false,
+      "dateOfBirth" : "1990-01-01"
+    },
+    "isPartOfOrganisation": true,
+    "organisationName": "test Org Name",
+    "telephone": "07777777777",
+    "email": "test@gmail.com",
+    "emailVerified": true,
+    "address": {
+      "line1" : "line1",
+      "line2" : "line2",
+      "postcode" : "AB12 3YZ",
+      "country" : {
+        "code" : "GB",
+        "name" : "United Kingdom"
+      },
+      "addressValidated" : true
+    },
+    "declarationCapacity": {
+      "role": "01"
+    }
   },
   "eligibilityJson": {
     "businessEntity": "61",
@@ -39,7 +68,7 @@
         "last": "testLastName"
       },
       "nino": "AA123456A",
-      "identifiersMatch": true,
+      "identifiersMatch": false,
       "dateOfBirth": "1990-01-01"
     },
     "entity": {
@@ -336,7 +365,7 @@
     "hasWebsite": false,
     "contactPreference": "Email",
     "welshLanguage": false,
-    "hasLandAndProperty": false,
+    "hasLandAndProperty": true,
     "businessDescription": "test",
     "businessActivities": [
       {
@@ -354,6 +383,7 @@
   },
   "vatApplication": {
     "eoriRequested": false,
+    "hasTaxRepresentative": true,
     "tradeVatGoodsOutsideUk": true,
     "turnoverEstimate": 600,
     "zeroRatedSupplies": 600,

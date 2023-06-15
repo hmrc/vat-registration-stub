@@ -3,7 +3,7 @@
   "internalId": "Int-bca68331-c106-41cf-bfba-07860c52e739",
   "createdDate": "2023-06-15",
   "status": "draft",
-  "applicationReference": "User needing form 2 attachment",
+  "applicationReference": "Vat 5L Form User",
   "confirmInformationDeclaration": true,
   "eligibilitySubmissionData": {
     "threshold": {
@@ -317,7 +317,7 @@
     }
   ],
   "attachments": {
-    "additionalPartnersDocuments": true
+    "additionalPartnersDocuments": false
   },
   "business": {
     "hasTradingName": true,
@@ -336,7 +336,7 @@
     "hasWebsite": false,
     "contactPreference": "Email",
     "welshLanguage": false,
-    "hasLandAndProperty": false,
+    "hasLandAndProperty": true,
     "businessDescription": "test",
     "businessActivities": [
       {
@@ -354,6 +354,7 @@
   },
   "vatApplication": {
     "eoriRequested": false,
+    "hasTaxRepresentative": false,
     "tradeVatGoodsOutsideUk": true,
     "turnoverEstimate": 600,
     "zeroRatedSupplies": 600,

@@ -3,7 +3,7 @@
   "internalId" : "Int-237ff544-cc5c-4e3c-95a1-149099d228a7",
   "createdDate" : "2023-06-12",
   "status" : "draft",
-  "applicationReference" : "User with Identification Evidence forms",
+  "applicationReference" : "User with Transaction Identification Evidence forms",
   "confirmInformationDeclaration" : true,
   "eligibilitySubmissionData" : {
     "threshold" : {
@@ -21,7 +21,7 @@
         "last" : "testLastNameTransactor"
       },
       "nino" : "AA123456A",
-      "identifiersMatch" : true,
+      "identifiersMatch" : false,
       "dateOfBirth" : "1990-01-01"
     },
     "isPartOfOrganisation": true,
@@ -61,7 +61,7 @@
         "last" : "testLastNamePD"
       },
       "nino" : "AA123456A",
-      "identifiersMatch" : false,
+      "identifiersMatch" : true,
       "dateOfBirth" : "1990-01-01"
     },
     "entity" : {

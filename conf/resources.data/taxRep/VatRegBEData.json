@@ -3,7 +3,7 @@
   "internalId": "Int-bca68331-c106-41cf-bfba-07860c52e739",
   "createdDate": "2023-06-15",
   "status": "draft",
-  "applicationReference": "User needing form 2 attachment",
+  "applicationReference": "Tax Representative Attachment User",
   "confirmInformationDeclaration": true,
   "eligibilitySubmissionData": {
     "threshold": {
@@ -354,6 +354,7 @@
   },
   "vatApplication": {
     "eoriRequested": false,
+    "hasTaxRepresentative": true,
     "tradeVatGoodsOutsideUk": true,
     "turnoverEstimate": 600,
     "zeroRatedSupplies": 600,
