@@ -1,0 +1,154 @@
+{
+  "registrationId" : "44dc8d59-ea11-46af-a2ce-3382a6b9156a",
+  "internalId" : "Int-237ff544-cc5c-4e3c-95a1-149099d228a7",
+  "createdDate" : "2023-06-12",
+  "status" : "draft",
+  "applicationReference" : "User with Identification Evidence forms",
+  "confirmInformationDeclaration" : true,
+  "eligibilitySubmissionData" : {
+    "threshold" : {
+      "mandatoryRegistration" : false
+    },
+    "partyType" : "50",
+    "registrationReason" : "0011",
+    "isTransactor" : true,
+    "fixedEstablishmentInManOrUk" : true
+  },
+  "transactorDetails": {
+    "personalDetails" : {
+      "name" : {
+        "first" : "testFirstNameTransactor",
+        "last" : "testLastNameTransactor"
+      },
+      "nino" : "AA123456A",
+      "identifiersMatch" : false,
+      "dateOfBirth" : "1990-01-01"
+    },
+    "isPartOfOrganisation": true,
+    "organisationName": "test Org Name",
+    "telephone": "07777777777",
+    "email": "test@gmail.com",
+    "emailVerified": true,
+    "address": {
+      "line1" : "line1",
+      "line2" : "line2",
+      "postcode" : "AB12 3YZ",
+      "country" : {
+        "code" : "GB",
+        "name" : "United Kingdom"
+      },
+      "addressValidated" : true
+    },
+    "declarationCapacity": {
+      "role": "01"
+    }
+  },
+  "eligibilityJson" : {
+    "businessEntity" : "50",
+    "CurrentProfile" : {
+      "registrationID" : "44dc8d59-ea11-46af-a2ce-3382a6b9156a"
+    },
+    "registrationReason" : "setting-up-vat-group",
+    "agriculturalFlatRateScheme" : false,
+    "fixedEstablishment" : true,
+    "registeringBusiness" : "own",
+    "internationalActivities" : false
+  },
+  "applicantDetails" : {
+    "personalDetails" : {
+      "name" : {
+        "first" : "testFirstNamePD",
+        "last" : "testLastNamePD"
+      },
+      "nino" : "AA123456A",
+      "identifiersMatch" : false,
+      "dateOfBirth" : "1990-01-01"
+    },
+    "entity" : {
+      "companyName" : "Test company",
+      "companyNumber" : "12345678",
+      "dateOfIncorporation" : "2020-01-01",
+      "ctutr" : "123567890",
+      "bpSafeId" : "testBpId",
+      "countryOfIncorporation" : "GB",
+      "businessVerification" : "PASS",
+      "registration" : "REGISTERED",
+      "identifiersMatch" : true
+    },
+    "currentAddress" : {
+      "line1" : "line1",
+      "line2" : "line2",
+      "postcode" : "AB12 3YZ",
+      "country" : {
+        "code" : "GB",
+        "name" : "United Kingdom"
+      },
+      "addressValidated" : true
+    },
+    "noPreviousAddress" : true,
+    "contact" : {
+      "email" : "test@gmail.com",
+      "tel" : "0777777777",
+      "emailVerified" : true
+    },
+    "changeOfName" : {
+      "hasFormerName" : false
+    },
+    "roleInTheBusiness" : "03"
+  },
+  "business" : {
+    "hasTradingName" : true,
+    "ppobAddress" : {
+      "line1" : "line1",
+      "line2" : "line2",
+      "postcode" : "AB12 3YZ",
+      "country" : {
+        "code" : "GB",
+        "name" : "United Kingdom"
+      },
+      "addressValidated" : true
+    },
+    "email" : "test@test.com",
+    "telephoneNumber" : "07777777777",
+    "hasWebsite" : false,
+    "contactPreference" : "Email",
+    "welshLanguage" : false,
+    "hasLandAndProperty" : false,
+    "businessDescription" : "test",
+    "businessActivities" : [
+      {
+        "code" : "36000",
+        "desc" : "Collection of rain water",
+        "descCy" : "Collection of rain water cy"
+      }
+    ],
+    "mainBusinessActivity" : {
+      "code" : "36000",
+      "desc" : "Collection of rain water",
+      "descCy" : "Collection of rain water cy"
+    },
+    "otherBusinessInvolvement" : false
+  },
+  "vatApplication" : {
+    "tradeVatGoodsOutsideUk" : false,
+    "turnoverEstimate" : 600,
+    "zeroRatedSupplies" : 600,
+    "claimVatRefunds" : false,
+    "returnsFrequency" : "quarterly",
+    "staggerStart" : "MA",
+    "startDate" : "2023-03-19",
+    "northernIrelandProtocol" : {
+      "goodsToEU" : {
+        "answer" : false
+      },
+      "goodsFromEU" : {
+        "answer" : false
+      }
+    },
+    "currentlyTrading" : true
+  },
+  "bankAccount" : {
+    "isProvided" : false,
+    "reason" : "BeingSetup"
+  }
+}

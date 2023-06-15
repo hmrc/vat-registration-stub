@@ -1,0 +1,230 @@
+{
+  "registrationId": "04209d6b-dabc-4188-a579-be6912a11aa7",
+  "internalId": "Int-bca68331-c106-41cf-bfba-07860c52e739",
+  "createdDate": "2023-06-15",
+  "status": "draft",
+  "applicationReference": "User needing form 2 attachment",
+  "confirmInformationDeclaration": true,
+  "eligibilitySubmissionData": {
+    "threshold": {
+      "mandatoryRegistration": false
+    },
+    "partyType": "61",
+    "registrationReason": "0018",
+    "isTransactor": false,
+    "fixedEstablishmentInManOrUk": true
+  },
+  "eligibilityJson": {
+    "businessEntity": "61",
+    "CurrentProfile": {
+      "registrationID": "04209d6b-dabc-4188-a579-be6912a11aa7"
+    },
+    "thresholdNextThirtyDays": {
+      "value": false
+    },
+    "voluntaryRegistration": true,
+    "registrationReason": "selling-goods-and-services",
+    "agriculturalFlatRateScheme": false,
+    "thresholdInTwelveMonths": {
+      "value": false
+    },
+    "fixedEstablishment": true,
+    "registeringBusiness": "own",
+    "internationalActivities": false
+  },
+  "applicantDetails": {
+    "personalDetails": {
+      "name": {
+        "first": "testFirstName",
+        "last": "testLastName"
+      },
+      "nino": "AA123456A",
+      "identifiersMatch": true,
+      "dateOfBirth": "1990-01-01"
+    },
+    "entity": {
+      "sautr": "1234567890",
+      "companyName": "test partnership name",
+      "postCode": "AA11AA",
+      "bpSafeId": "testBpId",
+      "registration": "REGISTERED",
+      "identifiersMatch": true
+    },
+    "currentAddress": {
+      "line1": "line1",
+      "line2": "line2",
+      "postcode": "AB12 3YZ",
+      "country": {
+        "code": "GB",
+        "name": "United Kingdom"
+      },
+      "addressValidated": true
+    },
+    "noPreviousAddress": true,
+    "contact": {
+      "email": "test@gmail.com",
+      "tel": "0777777777",
+      "emailVerified": true
+    },
+    "changeOfName": {
+      "hasFormerName": false
+    },
+    "roleInTheBusiness": "02"
+  },
+  "entities": [
+    {
+      "details": {
+        "firstName": "testFirstName",
+        "lastName": "testLastName",
+        "dateOfBirth": "1990-01-01",
+        "nino": "AA123456A",
+        "sautr": "1234567890",
+        "bpSafeId": "X00000123456789",
+        "registration": "REGISTERED",
+        "identifiersMatch": true
+      },
+      "partyType": "Z1",
+      "isLeadPartner": true
+    },
+    {
+      "details": {
+        "firstName": "testFirstName",
+        "lastName": "testLastName",
+        "dateOfBirth": "1990-01-01",
+        "nino": "AA123456A",
+        "sautr": "1234567890",
+        "bpSafeId": "X00000123456789",
+        "registration": "REGISTERED",
+        "identifiersMatch": true
+      },
+      "partyType": "Z1",
+      "isLeadPartner": false,
+      "address": {
+        "line1": "line1",
+        "line2": "line2",
+        "postcode": "AB12 3YZ",
+        "country": {
+          "code": "GB",
+          "name": "United Kingdom"
+        },
+        "addressValidated": true
+      },
+      "email": "testFirstName@gmail.com",
+      "telephoneNumber": "077777777777"
+    },
+    {
+      "details": {
+        "firstName": "testFirstName",
+        "lastName": "testLastName",
+        "dateOfBirth": "1990-01-01",
+        "nino": "AA123456A",
+        "sautr": "1234567890",
+        "bpSafeId": "X00000123456789",
+        "registration": "REGISTERED",
+        "identifiersMatch": true
+      },
+      "partyType": "Z1",
+      "isLeadPartner": false,
+      "address": {
+        "line1": "line1",
+        "line2": "line2",
+        "postcode": "AB12 3YZ",
+        "country": {
+          "code": "GB",
+          "name": "United Kingdom"
+        },
+        "addressValidated": true
+      },
+      "email": "testSecondName@gmail.com",
+      "telephoneNumber": "077777777777"
+    },
+    {
+      "details": {
+        "companyName": "Test company",
+        "companyNumber": "12345678",
+        "dateOfIncorporation": "2020-01-01",
+        "ctutr": "123567890",
+        "bpSafeId": "testBpId",
+        "countryOfIncorporation": "GB",
+        "registration": "REGISTERED",
+        "identifiersMatch": true
+      },
+      "partyType": "50",
+      "isLeadPartner": false,
+      "address": {
+        "line1": "line1",
+        "line2": "line2",
+        "postcode": "AB12 3YZ",
+        "country": {
+          "code": "GB",
+          "name": "United Kingdom"
+        },
+        "addressValidated": true
+      },
+      "email": "testCompany@gmail.com",
+      "telephoneNumber": "077777777777"
+    }
+  ],
+  "attachments": {
+    "additionalPartnersDocuments": false
+  },
+  "business": {
+    "hasTradingName": true,
+    "ppobAddress": {
+      "line1": "line1",
+      "line2": "line2",
+      "postcode": "AB12 3YZ",
+      "country": {
+        "code": "GB",
+        "name": "United Kingdom"
+      },
+      "addressValidated": true
+    },
+    "email": "test@test.com",
+    "telephoneNumber": "07777777777",
+    "hasWebsite": false,
+    "contactPreference": "Email",
+    "welshLanguage": false,
+    "hasLandAndProperty": true,
+    "businessDescription": "test",
+    "businessActivities": [
+      {
+        "code": "36000",
+        "desc": "Collection of rain water",
+        "descCy": "Collection of rain water cy"
+      }
+    ],
+    "mainBusinessActivity": {
+      "code": "36000",
+      "desc": "Collection of rain water",
+      "descCy": "Collection of rain water cy"
+    },
+    "otherBusinessInvolvement": false
+  },
+  "vatApplication": {
+    "eoriRequested": false,
+    "tradeVatGoodsOutsideUk": true,
+    "turnoverEstimate": 600,
+    "zeroRatedSupplies": 600,
+    "claimVatRefunds": true,
+    "returnsFrequency": "quarterly",
+    "staggerStart": "MB",
+    "startDate": "2023-03-19",
+    "northernIrelandProtocol": {
+      "goodsToEU": {
+        "answer": false
+      },
+      "goodsFromEU": {
+        "answer": false
+      }
+    },
+    "currentlyTrading": true
+  },
+  "bankAccount": {
+    "isProvided": false,
+    "reason": "BeingSetup"
+  },
+  "flatRateScheme": {
+    "joinFrs": false
+  }
+}
