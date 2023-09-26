@@ -3,6 +3,7 @@ import uk.gov.hmrc.DefaultBuildSettings.integrationTestSettings
 lazy val microservice = Project("vat-registration-stub", file("."))
   .enablePlugins(play.sbt.PlayScala, SbtDistributablesPlugin)
   .settings(
+    PlayKeys.playDefaultPort := 8082,
     majorVersion        := 0,
     scalaVersion        := "2.13.8",
     libraryDependencies ++= AppDependencies.compile ++ AppDependencies.test,
