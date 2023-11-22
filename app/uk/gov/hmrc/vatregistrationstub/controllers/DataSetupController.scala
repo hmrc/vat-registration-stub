@@ -30,19 +30,19 @@ import scala.concurrent.{ExecutionContext, Future}
 @Singleton()
 class DataSetupController @Inject()(cc: ControllerComponents,
                                     val httpClient: HttpClient,
-                                    val authConnector: AuthConnector,
                                     vatRegistrationBEConnector: VatRegistrationBEConnector,
                                     override implicit val executionContext: ExecutionContext)
-    extends BackendController(cc) with StubResource with AuthorisedFunctions {
+    extends BackendController(cc) with StubResource {
 
   val basePath = "/resources.data"
 
   def setupMongoData(id: String, regId: String): Action[AnyContent] = Action.async { implicit request =>
-    findResource(s"$basePath/$id/VatRegBEData.json") match {
-      case Some(content) =>
-            vatRegistrationBEConnector.startRegistration(Json.parse(content), id, regId)
-          case _ => Future.successful(Ok(Json.toJson("error")))
-        }
+    (findResource(s"$basePath/$id/VatRegBEData.json"), findResource(s"$basePath/$id/UpscanBEData.json")) match {
+      case (Some(content), maybeUpscan) =>
+        maybeUpscan.map(upscanDetails => vatRegistrationBEConnector.setupUpscan(Json.parse(upscanDetails), regId))
+        vatRegistrationBEConnector.startRegistration(Json.parse(content), id, regId)
+      case _ => Future.successful(Ok(Json.toJson("error")))
+    }
   }
 
 }

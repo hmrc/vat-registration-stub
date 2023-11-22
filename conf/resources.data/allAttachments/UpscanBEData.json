@@ -1,0 +1,24 @@
+[
+  {
+    "reference": "allAttachmentsVat51",
+    "attachmentType": "VAT51",
+    "fileStatus": "IN_PROGRESS"
+  },
+  {
+    "reference": "allAttachmentsVat2",
+    "attachmentType":  "VAT2",
+    "fileStatus": "FAILED"
+  },
+  {
+    "reference" : "allAttachmentsVat5L",
+    "attachmentType" : "VAT5L",
+    "fileStatus" : "READY",
+    "uploadDetails" : {
+      "fileName" : "PrimaryIdentityEvidence.testFile",
+      "fileMimeType" : "image/jpeg",
+      "uploadTimestamp" : "2018-04-24T09:30:00",
+      "checksum" : "396f101dd52e8b2ace0dcf5ed09b1d1f030e608938510ce46e7a5c7a4e775100",
+      "size" : 987
+    }
+  }
+]
