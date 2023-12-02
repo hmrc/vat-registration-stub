@@ -1,3 +1,5 @@
 # microservice specific routes
 
 GET        /setup-data/:id/:regId            uk.gov.hmrc.vatregistrationstub.controllers.DataSetupController.setupMongoData(id: String, regId: String)
+
+POST        /validation-json/:id                 uk.gov.hmrc.vatregistrationstub.controllers.ValidationController.validateJsonToJsonSchema(id: String)
