@@ -27,13 +27,15 @@ import javax.inject.Inject
 import scala.concurrent.{ExecutionContext, Future}
 
 class VatRegistrationBEConnector @Inject()(appConfig: AppConfig,
-                                           val httpClient: HttpClient) {
+                                           val httpClient: HttpClient)(
+                                          implicit ec: ExecutionContext) {
 
-  def url(regId: String) = s"${appConfig.vatRegUrl}/vatreg/test-only/setup-data/${regId}"
+  def setupDataUrl(regId: String) = s"${appConfig.vatRegUrl}/vatreg/test-only/setup-data/${regId}"
+  def setupUpscanUrl(regId: String) = s"${appConfig.vatRegUrl}/vatreg/test-only/setup-upscan/${regId}"
 
 
-  def startRegistration(data: JsValue, id: String, regId: String)(implicit hc: HeaderCarrier, ex: ExecutionContext): Future[Result] = {
-  httpClient.POST[JsValue, HttpResponse](url(regId = regId), data).map { idd =>
+  def startRegistration(data: JsValue, id: String, regId: String)(implicit hc: HeaderCarrier): Future[Result] = {
+  httpClient.POST[JsValue, HttpResponse](setupDataUrl(regId = regId), data).map { idd =>
     idd.status match {
       case CREATED => Created(Json.toJson(idd.json))
       case _ => InternalServerError(Json.toJson(idd.json))
@@ -42,6 +44,17 @@ class VatRegistrationBEConnector @Inject()(appConfig: AppConfig,
     case e: Exception => {
       Ok(Json.toJson(e.getMessage))
       }
+    }
+  }
+
+  def setupUpscan(data: JsValue, regId: String)(implicit hc: HeaderCarrier): Future[Result] = {
+    httpClient.POST[JsValue, HttpResponse](setupUpscanUrl(regId = regId), data).map { idd =>
+      idd.status match {
+        case CREATED => Created(Json.toJson(idd.json))
+        case _ => InternalServerError(Json.toJson(idd.json))
+      }
+    }.recover {
+      case e: Exception => Ok(Json.toJson(e.getMessage))
     }
   }
 
