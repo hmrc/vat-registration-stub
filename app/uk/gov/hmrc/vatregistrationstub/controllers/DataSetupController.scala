@@ -29,10 +29,10 @@ import scala.concurrent.{ExecutionContext, Future}
 
 @Singleton()
 class DataSetupController @Inject() (
-  cc: ControllerComponents,
-  val httpClient: HttpClient,
-  vatRegistrationBEConnector: VatRegistrationBEConnector,
-  override implicit val executionContext: ExecutionContext
+    cc: ControllerComponents,
+    val httpClient: HttpClient,
+    vatRegistrationBEConnector: VatRegistrationBEConnector,
+    override implicit val executionContext: ExecutionContext
 ) extends BackendController(cc) with StubResource {
 
   val basePath = "/resources.data"

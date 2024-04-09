@@ -27,7 +27,7 @@ import javax.inject.Inject
 import scala.concurrent.{ExecutionContext, Future}
 
 class VatRegistrationBEConnector @Inject() (appConfig: AppConfig, val httpClient: HttpClient)(
-  implicit ec: ExecutionContext
+    implicit ec: ExecutionContext
 ) {
 
   def setupDataUrl(regId: String)   = s"${appConfig.vatRegUrl}/vatreg/test-only/setup-data/${regId}"
