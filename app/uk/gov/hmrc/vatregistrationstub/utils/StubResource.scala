@@ -30,10 +30,9 @@ import play.api.mvc._
 import scala.concurrent.{ExecutionContext, Future}
 import scala.io.Source
 
-
 trait StubResource extends Results with ContentTypes with Status with Logging {
 
-  implicit def executionContext : ExecutionContext
+  implicit def executionContext: ExecutionContext
 
   def jsonResourceAsResponse(path: String): Result = resourceAsResponse(path, JSON)
 
@@ -47,12 +46,11 @@ trait StubResource extends Results with ContentTypes with Status with Logging {
     resourceAsResponse(path, XML)
   }
 
-  def resourceAsResponse(path: String, mimeType: String): Result = {
+  def resourceAsResponse(path: String, mimeType: String): Result =
     findResource(path) match {
       case Some(content) => Ok(content).as(mimeType)
-      case _ => NotFound
+      case _             => NotFound
     }
-  }
 
   def resourceAsResponseFuture(path: String, mimeType: String): Future[Result] = Future[Result] {
     resourceAsResponse(path, mimeType)
@@ -60,12 +58,11 @@ trait StubResource extends Results with ContentTypes with Status with Logging {
 
   def errorAsJsonResponse(status: Int, content: String): Result = errorAsResponse(status, content, JSON)
 
-  def errorAsResponse(status: Int, content: String, mimeType: String): Result = {
+  def errorAsResponse(status: Int, content: String, mimeType: String): Result =
     status match {
       case NOT_FOUND => NotFound(content).as(mimeType)
-      case _ => InternalServerError(content).as(mimeType)
+      case _         => InternalServerError(content).as(mimeType)
     }
-  }
 
   def findResource(path: String): Option[String] = {
     val resource = getClass.getResourceAsStream(path)
@@ -77,9 +74,8 @@ trait StubResource extends Results with ContentTypes with Status with Logging {
     }
   }
 
-  private def readStreamToString(is: InputStream): String = {
+  private def readStreamToString(is: InputStream): String =
     try Source.fromInputStream(is).mkString.toString
     finally is.close()
-  }
 
 }
