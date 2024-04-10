@@ -1,7 +1,7 @@
 
 # vat-registration-stub
 
-This is a placeholder README.md for a new repository
+A stub implementation for VAT registration Endpoints
 
 ### Locally
 `sbt run` or `sbt 'run 8082'`
