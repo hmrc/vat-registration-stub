@@ -20,6 +20,7 @@ import play.api.http.Status._
 import play.api.libs.json._
 import play.api.mvc.Result
 import play.api.mvc.Results._
+import uk.gov.hmrc.http.HttpReads.Implicits._
 import uk.gov.hmrc.http.{HeaderCarrier, HttpClient, HttpResponse}
 import uk.gov.hmrc.vatregistrationstub.config.AppConfig
 
@@ -30,8 +31,8 @@ class VatRegistrationBEConnector @Inject() (appConfig: AppConfig, val httpClient
     implicit ec: ExecutionContext
 ) {
 
-  def setupDataUrl(regId: String)   = s"${appConfig.vatRegUrl}/vatreg/test-only/setup-data/${regId}"
-  def setupUpscanUrl(regId: String) = s"${appConfig.vatRegUrl}/vatreg/test-only/setup-upscan/${regId}"
+  private def setupDataUrl(regId: String)   = s"${appConfig.vatRegUrl}/vatreg/test-only/setup-data/${regId}"
+  private def setupUpscanUrl(regId: String) = s"${appConfig.vatRegUrl}/vatreg/test-only/setup-upscan/${regId}"
 
   def startRegistration(data: JsValue, id: String, regId: String)(implicit hc: HeaderCarrier): Future[Result] =
     httpClient.POST[JsValue, HttpResponse](setupDataUrl(regId = regId), data).map { idd =>

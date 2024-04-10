@@ -18,7 +18,6 @@ package uk.gov.hmrc.vatregistrationstub.controllers
 
 import play.api.libs.json.Json
 import play.api.mvc.{Action, AnyContent, ControllerComponents}
-import uk.gov.hmrc.auth.core.{AuthConnector, AuthorisedFunctions}
 import uk.gov.hmrc.http.HttpClient
 import uk.gov.hmrc.play.bootstrap.backend.controller.BackendController
 import uk.gov.hmrc.vatregistrationstub.connectors.VatRegistrationBEConnector
@@ -32,8 +31,7 @@ class DataSetupController @Inject() (
     cc: ControllerComponents,
     val httpClient: HttpClient,
     vatRegistrationBEConnector: VatRegistrationBEConnector,
-    override implicit val executionContext: ExecutionContext
-) extends BackendController(cc) with StubResource {
+)(override implicit val executionContext: ExecutionContext) extends BackendController(cc) with StubResource {
 
   val basePath = "/resources.data"
 
