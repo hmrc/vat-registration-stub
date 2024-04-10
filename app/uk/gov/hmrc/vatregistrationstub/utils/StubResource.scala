@@ -21,48 +21,17 @@ package uk.gov.hmrc.vatregistrationstub.utils
  *
  */
 
-import java.io.InputStream
-
 import play.api.Logging
 import play.api.http.{ContentTypes, Status}
 import play.api.mvc._
 
-import scala.concurrent.{ExecutionContext, Future}
+import java.io.InputStream
+import scala.concurrent.ExecutionContext
 import scala.io.Source
 
 trait StubResource extends Results with ContentTypes with Status with Logging {
 
   implicit def executionContext: ExecutionContext
-
-  def jsonResourceAsResponse(path: String): Result = resourceAsResponse(path, JSON)
-
-  def jsonResourceAsResponseFuture(path: String): Future[Result] = Future[Result] {
-    resourceAsResponse(path, JSON)
-  }
-
-  def xmlResourceAsResponse(path: String): Result = resourceAsResponse(path, XML)
-
-  def xmlResourceAsResponseFuture(path: String): Future[Result] = Future[Result] {
-    resourceAsResponse(path, XML)
-  }
-
-  def resourceAsResponse(path: String, mimeType: String): Result =
-    findResource(path) match {
-      case Some(content) => Ok(content).as(mimeType)
-      case _             => NotFound
-    }
-
-  def resourceAsResponseFuture(path: String, mimeType: String): Future[Result] = Future[Result] {
-    resourceAsResponse(path, mimeType)
-  }
-
-  def errorAsJsonResponse(status: Int, content: String): Result = errorAsResponse(status, content, JSON)
-
-  def errorAsResponse(status: Int, content: String, mimeType: String): Result =
-    status match {
-      case NOT_FOUND => NotFound(content).as(mimeType)
-      case _         => InternalServerError(content).as(mimeType)
-    }
 
   def findResource(path: String): Option[String] = {
     val resource = getClass.getResourceAsStream(path)
@@ -75,7 +44,7 @@ trait StubResource extends Results with ContentTypes with Status with Logging {
   }
 
   private def readStreamToString(is: InputStream): String =
-    try Source.fromInputStream(is).mkString.toString
+    try Source.fromInputStream(is).mkString
     finally is.close()
 
 }
