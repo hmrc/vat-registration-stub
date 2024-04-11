@@ -21,10 +21,9 @@ import play.api.Configuration
 import uk.gov.hmrc.play.bootstrap.config.ServicesConfig
 
 @Singleton
-class AppConfig @Inject()(config: Configuration,
-                          val serviceConfig: ServicesConfig) {
+class AppConfig @Inject() (config: Configuration, val serviceConfig: ServicesConfig) {
 
   val appName: String = config.get[String]("appName")
 
-  val vatRegUrl: String =  serviceConfig.baseUrl("vat-registration")
+  val vatRegUrl: String = serviceConfig.baseUrl("vat-registration")
 }
