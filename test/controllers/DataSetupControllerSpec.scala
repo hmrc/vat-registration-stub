@@ -35,9 +35,9 @@ import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 
 class DataSetupControllerSpec extends AnyFreeSpec with Matchers with GuiceOneAppPerSuite {
-  private val mockConnector =  mock[VatRegistrationBEConnector]
-  private val mockHttpClient =  mock[HttpClient]
-  private val cc = app.injector.instanceOf[ControllerComponents]
+  private val mockConnector  = mock[VatRegistrationBEConnector]
+  private val mockHttpClient = mock[HttpClient]
+  private val cc             = app.injector.instanceOf[ControllerComponents]
 
   val controller = new DataSetupController(cc, mockHttpClient, mockConnector)
 

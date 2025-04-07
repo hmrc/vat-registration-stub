@@ -357,8 +357,11 @@
   "vatApplication" : {
     "eoriRequested" : false,
     "tradeVatGoodsOutsideUk" : true,
-    "turnoverEstimate" : 600,
-    "zeroRatedSupplies" : 600,
+    "standardRateSupplies": 2000,
+    "reducedRateSupplies": 1000,
+    "zeroRatedSupplies": 600,
+    "turnoverEstimate": 3600,
+    "acceptTurnOverEstimate": true,
     "claimVatRefunds" : true,
     "returnsFrequency" : "quarterly",
     "staggerStart" : "MB",
